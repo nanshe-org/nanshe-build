@@ -140,6 +140,7 @@ requirements:
   # listed explicitly if they are required.
   build:
     - python
+    - openblas
     - numpy
     - scipy
     
@@ -147,6 +148,7 @@ requirements:
   # will be installed automatically whenever the package is installed.
   run:
     - python
+    - openblas
     - numpy
     - scipy
 
