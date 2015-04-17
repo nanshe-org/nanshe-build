@@ -29,6 +29,7 @@ requirements:
   # Packages required to build the package. python and numpy must be
   # listed explicitly if they are required.
   build:
+    - openblas
     - fftw
     - python
     - setuptools
@@ -49,6 +50,7 @@ requirements:
   # Package names should be any valid conda spec (see "Specifying versions
   # in requirements" below).
   run:
+    - openblas
     - fftw
     - python
     - setuptools
