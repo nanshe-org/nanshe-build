@@ -43,7 +43,7 @@ echo "LINK_ARG=$LINK_ARG"
 # First, with --layout=tagged to create libraries named with -mt convention
 ./b2 \
   --layout=tagged \
-  -j ${CPU_COUNT} \
+  -j${CPU_COUNT} \
   -sNO_BZIP2=1 \
   ${B2ARGS} \
   ${CXXFLAGS_ARG} \
@@ -53,7 +53,7 @@ echo "LINK_ARG=$LINK_ARG"
 # Second, without --layout=tagged, to create libraries without -mt names
 # If all upstream libraries could be fixed to depend on the tagged name, we could eliminate this redundancy
 ./b2 \
-  -j ${CPU_COUNT} \
+  -j${CPU_COUNT} \
   -sNO_BZIP2=1 \
   ${B2ARGS} \
   ${CXXFLAGS_ARG} \
