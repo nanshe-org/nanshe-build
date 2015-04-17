@@ -35,7 +35,7 @@ fi
 
 CXXFLAGS_ARG=""
 if [ "${CXXFLAGS}" != "" ]; then
-    CXXFLAGS_ARG="cxxflags=\"${CXXFLAGS}\""
+    CXXFLAGS_ARG=cxxflags=
 fi
 
 echo "LINK_ARG=$LINK_ARG"
@@ -46,7 +46,7 @@ echo "LINK_ARG=$LINK_ARG"
   -j${CPU_COUNT} \
   -sNO_BZIP2=1 \
   ${B2ARGS} \
-  ${CXXFLAGS_ARG} \
+  ${CXXFLAGS_ARG}"${CXXFLAGS}" \
   ${LINK_ARG}"${CXX_LDFLAGS}" \
   install
 
@@ -55,8 +55,8 @@ echo "LINK_ARG=$LINK_ARG"
 ./b2 \
   -j${CPU_COUNT} \
   -sNO_BZIP2=1 \
-  ${B2ARGS} \
-  ${CXXFLAGS_ARG} \
+  $B2ARGS \
+  ${CXXFLAGS_ARG}"${CXXFLAGS}" \
   ${LINK_ARG}"${CXX_LDFLAGS}" \
   install
 
