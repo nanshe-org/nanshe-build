@@ -1,12 +1,12 @@
 package:
   name: openblas
-  version: 1.13
+  version: 0.2.14
 
 source:
-  fn: openblas-0.2.8.tgz
-  url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.8
-  patches:
-    - affinity.patch
+  fn: openblas-0.2.14.tgz
+  url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.14
+#  patches:
+#    - affinity.patch
 
 build:
   number: 669
