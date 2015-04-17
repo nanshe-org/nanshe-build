@@ -8,17 +8,17 @@ source:
 
 requirements:
   build:
-    - system
     - python
+    - openblas
     - numpy
     #- blas
     #- lapack
     #- atlas
-    - openblas
 
   run:
-    - numpy
+    - python
     - openblas
+    - numpy
 
 build:
   number: 0
