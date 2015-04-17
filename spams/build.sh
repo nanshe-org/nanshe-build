@@ -3,8 +3,8 @@ CWD=$(cd `dirname $0` && pwd)
 source $CWD/../common-vars.sh
 
 # Grab the right gcc/g++ from the path.
-GCC=$(which gcc)
-GXX=$(which g++)
+GCC=$PREFIX/bin/gcc
+GXX=$PREFIX/bin/g++
 
 # CONFIGURE
 cd $SRC_DIR
