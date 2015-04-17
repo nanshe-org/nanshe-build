@@ -33,6 +33,11 @@ if [ "${CXX_LDFLAGS}" != "" ]; then
     LINK_ARG=linkflags=
 fi
 
+CXXFLAGS_ARG=""
+if [ "${CXXFLAGS}" != "" ]; then
+    CXXFLAGS_ARG="cxxflags=\"${CXXFLAGS}\""
+fi
+
 echo "LINK_ARG=$LINK_ARG"
 
 # First, with --layout=tagged to create libraries named with -mt convention
@@ -41,7 +46,7 @@ echo "LINK_ARG=$LINK_ARG"
   -j ${CPU_COUNT} \
   -sNO_BZIP2=1 \
   ${B2ARGS} \
-  cxxflags="${CXXFLAGS}" \
+  ${CXXFLAGS_ARG} \
   ${LINK_ARG}"${CXX_LDFLAGS}" \
   install
 
@@ -51,7 +56,7 @@ echo "LINK_ARG=$LINK_ARG"
   -j ${CPU_COUNT} \
   -sNO_BZIP2=1 \
   ${B2ARGS} \
-  cxxflags="${CXXFLAGS}" \
+  ${CXXFLAGS_ARG} \
   ${LINK_ARG}"${CXX_LDFLAGS}" \
   install
 
