@@ -9,4 +9,4 @@ script:
   - conda build openblas fftw boost numpy scipy bottleneck pyfftw vigra rank_filter spams nanshe
 build_targets:
   files: conda
-  channels: main
+  #channels: main
