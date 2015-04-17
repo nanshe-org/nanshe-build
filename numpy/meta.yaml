@@ -1,0 +1,24 @@
+package:
+  name: numpy
+  version: 1.9.0
+
+source:
+  url: https://pypi.python.org/packages/source/n/numpy/numpy-1.9.0.tar.gz
+  fn: numpy-1.9.0.tar.gz
+
+requirements:
+  build:
+    - python
+    - openblas 
+
+  run:
+    - python
+    - openblas
+
+build:
+  number: 0
+
+
+about:
+  home: https://www.numpy.org
+  license: PSF
