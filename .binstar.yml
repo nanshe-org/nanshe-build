@@ -6,7 +6,7 @@ platform:
 engine:
   - python=2.7
 script:
-  - conda build openblas fftw boost numpy scipy bottleneck pyfftw vigra rank_filter spams nanshe
+  - conda install gcc; conda build openblas fftw boost numpy scipy bottleneck pyfftw vigra rank_filter spams nanshe
 build_targets:
   files: conda
   #channels: main
