@@ -44,6 +44,7 @@ requirements:
     - spams
     - rank_filter
     - pyqt
+    - volumina
 
   # Packages required to run the package. These are the dependencies that
   # will be installed automatically whenever the package is installed.
@@ -65,6 +66,7 @@ requirements:
     - spams
     - rank_filter
     - pyqt
+    - volumina
 
 test:
   # Python imports
