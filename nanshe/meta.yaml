@@ -11,11 +11,6 @@ build:
   # number. If you do not include this key, it defaults to 0.
   # number: 1
 
-  # A list of globs for files that should not be linked (soft or
-  # hard). They will always be copied.
-  no_link:
-    - bin/*
-
   # Whether binary files should be made relocatable using install_name_tool
   # on OS X or patchelf on Linux.
   #binary_relocation: false # (defaults to true)
