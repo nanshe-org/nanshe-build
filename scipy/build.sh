@@ -6,8 +6,12 @@
 # Depending on our platform, shared libraries end with either .so or .dylib
 if [[ `uname` == 'Darwin' ]]; then
     DYLIB_EXT=dylib
+    CC=clang
+    CXX=clang++
 else
     DYLIB_EXT=so
+    CC=gcc
+    CXX=g++
 fi
 
 export LAPACK=$PREFIX/lib/libopenblas.$DYLIB_EXT
@@ -19,5 +23,5 @@ test -f $BLAS
 
 unset LDFLAGS
 
-$PYTHON setup.py install
+CC=$CC CXX=$CXX $PYTHON setup.py install
 
