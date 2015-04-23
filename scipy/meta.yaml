@@ -8,6 +8,7 @@ source:
 
 requirements:
   build:
+    - gcc
     - python
     - openblas
     - numpy
@@ -16,6 +17,7 @@ requirements:
     #- atlas
 
   run:
+    - gcc
     - python
     - openblas
     - numpy
