@@ -6,6 +6,17 @@
 CWD=$(cd `dirname $0` && pwd)
 source $CWD/../common-vars.sh
 
+# Depending on our platform, shared libraries end with either .so or .dylib
+if [[ `uname` == 'Darwin' ]]; then
+    export DYLIB_EXT=dylib
+    export CC=clang
+    export CXX=clang++
+else
+    export DYLIB_EXT=so
+    export CC=gcc
+    export CXX=g++
+fi
+
 export LDFLAGS="-L${PREFIX}/lib"
 export CFLAGS="${CFLAGS} -I${PREFIX}/include"
 
@@ -42,3 +53,9 @@ $CONFIGURE --enable-sse2
 ${BUILD_CMD}
 ${INSTALL_CMD}
 ${TEST_CMD}
+
+unset DYLIB_EXT
+unset CC
+unset CXX
+unset LDFLAGS
+unset CFLAGS
