@@ -5,8 +5,6 @@ package:
 source:
   fn: openblas-0.2.14.tgz
   url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.14
-#  patches:
-#    - affinity.patch
 
 build:
   number: 670
