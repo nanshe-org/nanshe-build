@@ -9,7 +9,7 @@ source:
 #    - affinity.patch
 
 build:
-  number: 669
+  number: 670
 
 requirements:
   build:
