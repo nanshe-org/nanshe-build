@@ -18,6 +18,9 @@ requirements:
         - numpy
         - fftw
 
+build:
+  number: 1
+
 test:
     # Python imports
     imports:
