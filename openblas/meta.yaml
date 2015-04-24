@@ -11,6 +11,13 @@ source:
 build:
   number: 669
 
+requirements:
+  build:
+    - gcc
+
+  run:
+    - gcc
+
 about:
   home: http://xianyi.github.io/OpenBLAS/
   license: BSD
