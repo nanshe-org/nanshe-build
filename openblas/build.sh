@@ -1,8 +1,12 @@
 # Depending on our platform, shared libraries end with either .so or .dylib
 if [[ `uname` == 'Darwin' ]]; then
     DYLIB_EXT=dylib
+    CC=clang
+    CXX=clang++
 else
     DYLIB_EXT=so
+    CC=gcc
+    CXX=g++
 fi
 
 if [[ `uname` == 'Darwin' ]]; then
@@ -15,7 +19,7 @@ else
     CXX_LDFLAGS="${LDFLAGS}"
 fi
 
-make TARGET=NEHALEM BINARY=64 NO_LAPACK=0 NO_AFFINITY=1 NUM_THREADS=1 -j${CPU_COUNT}
+CC=$CC CXX=$CXX make TARGET=NEHALEM BINARY=64 NO_LAPACK=0 NO_AFFINITY=1 NUM_THREADS=1 -j${CPU_COUNT}
 make install PREFIX=$PREFIX
 
 ln -fs $PREFIX/lib/libopenblas.a $PREFIX/lib/libblas.a
