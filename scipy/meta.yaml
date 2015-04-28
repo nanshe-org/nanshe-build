@@ -23,7 +23,10 @@ requirements:
     - numpy
 
 build:
-  number: 2
+  number: 3
+
+  features:
+    - openblas
 
 about:
   home: https://www.scipy.org
