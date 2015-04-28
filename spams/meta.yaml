@@ -56,7 +56,7 @@ source:
 
 build:
   # The build number should be incremented for new builds of the same version
-  #number: 1       # (defaults to 0)
+  number: 1       # (defaults to 0)
   #string: abc     # (defaults to default conda build string plus the build
   #                # number)
   #                # The build string cannot contain a dash '-' character
@@ -75,8 +75,8 @@ build:
   ## See the Features section below for more information on features
 
   ## Defines what features a package has
-  #features:
-  #  - feature1
+  features:
+    - openblas
 
   ## Indicates that installing this package should enable (track) the given
   ## features. It is generally a good idea to use a separate metapackage to
@@ -163,8 +163,8 @@ test:
   # in addition to the run-time requirements, you can specify requirements
   # needed during testing. The run time requirements specified above are
   # included automatically.
-  #requires:
-  #  - nose
+  requires:
+    - openblas
 
   ## commands we want to make sure they work, which are expected to get
   ## installed by the package
