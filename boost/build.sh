@@ -30,6 +30,8 @@ if [ `uname` == Darwin ]; then
 fi
 
 if [ `uname` == Linux ]; then
+  CXXFLAGS="${CXXFLAGS} -std=c++11"
+
   ./bootstrap.sh \
     --prefix="${PREFIX}/" --libdir="${PREFIX}/lib/" \
     | tee bootstrap.log 2>&1
