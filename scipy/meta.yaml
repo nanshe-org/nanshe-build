@@ -12,9 +12,6 @@ requirements:
     - python
     - openblas
     - numpy
-    #- blas
-    #- lapack
-    #- atlas
 
   run:
     - gcc
