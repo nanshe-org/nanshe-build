@@ -5,6 +5,29 @@ package:
 build:
   number: 0
 
+  always_include_files:
+    - lib/libgcc_ext.10.4.dylib             # [osx]
+    - lib/libgcc_ext.10.5.dylib             # [osx]
+    - lib/libgcc_s.1.dylib                  # [osx]
+    - lib/libgcc_s_ppc64.1.dylib            # [osx]
+    - lib/libgcc_s_x86_64.1.dylib           # [osx]
+    - lib/libgcj-tools.14.dylib             # [osx]
+    - lib/libgcj-tools.dylib                # [osx]
+    - lib/libgcj.14.dylib                   # [osx]
+    - lib/libgcj.dylib                      # [osx]
+    - lib/libgfortran.3.dylib               # [osx]
+    - lib/libgfortran.dylib                 # [osx]
+    - lib/libgij.14.dylib                   # [osx]
+    - lib/libgij.dylib                      # [osx]
+    - lib/libgomp.1.dylib                   # [osx]
+    - lib/libgomp.dylib                     # [osx]
+    - lib/libobjc-gnu.4.dylib               # [osx]
+    - lib/libobjc-gnu.dylib                 # [osx]
+    - lib/libquadmath.0.dylib               # [osx]
+    - lib/libquadmath.dylib                 # [osx]
+    - lib/libstdc++.6.dylib                 # [osx]
+    - lib/libstdc++.dylib                   # [osx]
+
   detect_binary_files_with_prefix: true
 
 requirements:
