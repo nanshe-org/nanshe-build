@@ -1,0 +1,17 @@
+package:
+  name: libgcc
+  version: 4.8.2
+
+build:
+  number: 0
+
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc 4.8.2
+
+about:
+  home: http://gcc.gnu.org/
+  summary: The GNU Compiler Collection
+  license: GPL
