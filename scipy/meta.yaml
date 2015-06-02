@@ -14,13 +14,13 @@ requirements:
     - numpy
 
   run:
-    - gcc
+    - libgcc
     - python
     - openblas
     - numpy
 
 build:
-  number: 3
+  number: 4
 
   features:
     - openblas
