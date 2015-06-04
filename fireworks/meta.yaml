@@ -1,11 +1,11 @@
 package:
   name: fireworks
-  version: "1.06"
+  version: "1.07"
 
 source:
-  fn: FireWorks-1.06.tar.gz
-  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.06.tar.gz
-  md5: 340de3b6731479b8291c5e848e5e7523
+  fn: FireWorks-1.07.tar.gz
+  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.07.tar.gz
+  md5: fd5422b65dfc2a5e0000fa81a0aa06cd
 #  patches:
    # List any patch files here
    # - fix.patch
