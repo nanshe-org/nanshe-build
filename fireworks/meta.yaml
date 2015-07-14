@@ -1,16 +1,17 @@
 package:
   name: fireworks
-  version: "1.07"
+  version: "1.08"
 
 source:
-  fn: FireWorks-1.07.tar.gz
-  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.07.tar.gz
-  md5: fd5422b65dfc2a5e0000fa81a0aa06cd
+  fn: FireWorks-1.08.tar.gz
+  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.08.tar.gz
+  md5: cb23c7cdc45028b1cda55696221a469f
 #  patches:
    # List any patch files here
    # - fix.patch
 
 # build:
+  # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -77,7 +78,8 @@ test:
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  # requires:
+  requires:
+    - nose
     # Put any additional test requirements here.  For example
     # - nose
 
