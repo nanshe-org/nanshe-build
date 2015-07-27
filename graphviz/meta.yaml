@@ -10,10 +10,12 @@ source:
      - gvconfig_libdir.patch
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
+    - expat
+    - fontconfig
     - cairo
     - libpng
     - libtiff
@@ -21,6 +23,8 @@ requirements:
     - jpeg
     - zlib
   run:
+    - expat
+    - fontconfig
     - cairo
     - libpng
     - libtiff
