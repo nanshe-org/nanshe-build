@@ -6,11 +6,22 @@ source $CWD/../common-vars.sh
 GCC=$PREFIX/bin/gcc
 GXX=$PREFIX/bin/g++
 
+# Set include path if it is missing.
+if [ -n $INCLUDE_PATH ] ;
+then
+    INCLUDE_PATH=$PREFIX/include
+fi
+# Set library path if it is missing.
+if [ -n $LIBRARY_PATH ] ;
+then
+    LIBRARY_PATH=$PREFIX/include
+fi
+
 # CONFIGURE
 cd $SRC_DIR
 
 # BUILD (in parallel)
-eval CC=$GCC CXX=$GXX ${LIBRARY_SEARCH_VAR}=$PREFIX/lib ${PYTHON} setup.py build
+eval CC=$GCC CXX=$GXX INCLUDE_PATH=$INCLUDE_PATH LIBRARY_PATH=$LIBRARY_PATH ${LIBRARY_SEARCH_VAR}=$PREFIX/lib ${PYTHON} setup.py build
 
 # "install" to the build prefix (conda will relocate these files afterwards)
-eval CC=$GCC CXX=$GXX ${LIBRARY_SEARCH_VAR}=$PREFIX/lib ${PYTHON} setup.py install --prefix=$PREFIX
+eval CC=$GCC CXX=$GXX INCLUDE_PATH=$INCLUDE_PATH LIBRARY_PATH=$LIBRARY_PATH ${LIBRARY_SEARCH_VAR}=$PREFIX/lib ${PYTHON} setup.py install --prefix=$PREFIX
