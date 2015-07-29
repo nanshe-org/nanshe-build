@@ -20,7 +20,7 @@ requirements:
     - numpy
 
 build:
-  number: 0
+  number: 100
 
   features:
     - openblas
