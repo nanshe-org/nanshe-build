@@ -1,6 +1,6 @@
 package:
   name: spams   # lower case name of package, may contain '-' but no spaces
-  version: "v2.4"     # version of package. Should use the PEP-386 verlib
+  version: "v2.5"     # version of package. Should use the PEP-386 verlib
                       # conventions. Note that YAML will interpret
                       # versions like 1.0 as floats, meaning that 1.0 will
                       # be the same as 1. To avoid this, always put the
@@ -12,11 +12,11 @@ package:
 source:
   ## The source section specifies where the source code of the package is
   ## coming from, it may be coming from a source tarball like:
-  fn: spams-python-v2.4-svn2014-03-27.tar.gz
-  url: http://spams-devel.gforge.inria.fr/hitcounter2.php?file=33494/spams-python-v2.4-svn2014-03-27.tar.gz
-  #md5: 29f6089290505fc1a852e176bd276c43
-  sha1: fb9fdd353c3d9d4b9bf3617a7e1462f06b8c1fb5
-  #sha256: 5a022ff4c1d1de87232b1c70bde50afbb98212fd246be4a867d8737173cf1f8f
+  fn: spams-python-v2.5-svn2014-03-27.tar.gz
+  url: http://spams-devel.gforge.inria.fr/hitcounter2.php?file=33816/spams-python-v2.5-svn2014-07-04.tar.gz
+  #md5: bad3e1d319c6986bdda5afe1695713bd
+  sha1: f6f6d7fe385773690f886ee6d077a1cdf6f2ba41
+  #sha256: d61f6b940370f801e62a5c11e95ef52cc5016b97bce48ef227f4bef8afc84b24
 
   # or from git:
   # git_url can also be a relative path to the recipe directory
@@ -56,7 +56,7 @@ source:
 
 build:
   # The build number should be incremented for new builds of the same version
-  number: 3        # (defaults to 0)
+  number: 0        # (defaults to 0)
   #string: abc     # (defaults to default conda build string plus the build
   #                # number)
   #                # The build string cannot contain a dash '-' character
