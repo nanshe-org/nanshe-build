@@ -7,7 +7,7 @@ source:
   url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.14
 
 build:
-  number: 672
+  number: 673
 
   track_features:
     - openblas
