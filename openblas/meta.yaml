@@ -13,9 +13,6 @@ build:
     - openblas
 
 requirements:
-  build:
-    - gcc
-
   run:
     - libgcc
 
