@@ -8,8 +8,6 @@ fi
 if [[ `uname` == 'Darwin' ]]; then
     CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
     CXX_LDFLAGS="${LDFLAGS} -stdlib=libc++"
-    #CXXFLAGS="${CXXFLAGS}"
-    #CXX_LDFLAGS="${LDFLAGS}"
 else
     CXXFLAGS="${CXXFLAGS}"
     CXX_LDFLAGS="${LDFLAGS}"
