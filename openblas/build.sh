@@ -5,15 +5,6 @@ else
     DYLIB_EXT=so
 fi
 
-# On Mac, make sure that we use libc++.
-if [[ `uname` == 'Darwin' ]]; then
-    CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
-    CXX_LDFLAGS="${LDFLAGS} -stdlib=libc++"
-else
-    CXXFLAGS="${CXXFLAGS}"
-    CXX_LDFLAGS="${LDFLAGS}"
-fi
-
 # Build all CPU targets and allow dynamic configuration
 # Build LAPACK.
 # Set number of thread to 1; however, this can be changed by
