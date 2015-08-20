@@ -16,7 +16,7 @@ requirements:
     - openblas
 
 build:
-  number: 3
+  number: 5
 
   features:
     - openblas
