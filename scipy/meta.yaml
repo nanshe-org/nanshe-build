@@ -8,7 +8,6 @@ source:
 
 requirements:
   build:
-    - gcc
     - python
     - openblas
     - numpy
