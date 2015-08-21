@@ -14,7 +14,7 @@ fi
 # Set library path if it is missing.
 if [ -n $LIBRARY_PATH ] ;
 then
-    LIBRARY_PATH=$PREFIX/include
+    LIBRARY_PATH=$PREFIX/lib
 fi
 
 # CONFIGURE
