@@ -22,7 +22,7 @@ source:
   # or from git:
   # git_url can also be a relative path to the recipe directory
   git_url: git://github.com/nanshe-org/rank_filter.git
-  git_tag: v0.1
+  git_tag: v0.1.0
 
   ## or from hg:
   #hg_url: ssh://hg@bitbucket.org/ilanschnell/bsdiff4
