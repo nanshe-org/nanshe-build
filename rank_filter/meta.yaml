@@ -21,7 +21,7 @@ source:
 
   # or from git:
   # git_url can also be a relative path to the recipe directory
-  git_url: git://github.com/jakirkham/rank_filter.git
+  git_url: git://github.com/nanshe-org/rank_filter.git
   git_tag: v0.1
 
   ## or from hg:
@@ -190,7 +190,7 @@ test:
   # recipe
 
 about:
-  home: http://github.com/jakirkham/rank_filter
+  home: http://github.com/nanshe-org/rank_filter
   license: 
   summary: C++ boosted rank filter with Python bindings.
 
