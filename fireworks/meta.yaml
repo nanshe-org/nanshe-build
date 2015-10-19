@@ -1,11 +1,11 @@
 package:
   name: fireworks
-  version: "1.1.5"
+  version: "1.1.6"
 
 source:
-  fn: FireWorks-1.1.5.tar.gz
-  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.1.5.tar.gz
-  md5: 8dc62469e6941d7ee462eae9541a6d45
+  fn: FireWorks-1.1.6.tar.gz
+  url: https://pypi.python.org/packages/source/F/FireWorks/FireWorks-1.1.6.tar.gz
+  md5: 321345d3bc997531b1e78ebd4b954133
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -36,6 +36,7 @@ requirements:
     - six >=1.5.2
     - monty >=0.5.6
     - python-dateutil >=2.2
+    - tabulate >=0.7.5
 
   run:
     - python
@@ -45,6 +46,7 @@ requirements:
     - six >=1.5.2
     - monty >=0.5.6
     - python-dateutil >=2.2
+    - tabulate >=0.7.5
 
 test:
   # Python imports
@@ -53,6 +55,7 @@ test:
     - fireworks.core
     - fireworks.core.tests
     - fireworks.features
+    - fireworks.features.tests
     - fireworks.flask_site
     - fireworks.queue
     - fireworks.scripts
