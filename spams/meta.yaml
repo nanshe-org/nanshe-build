@@ -39,7 +39,9 @@ source:
 
   ## Patches may optionally be applied to the source
   patches:
-    - setup.py.patch    # the patch file is expected to be found in the recipe
+    - setup.py.patch                   # the patch file is expected to be found in the recipe
+    - spams_wrap.cpp.patch             # the patch file is expected to be found in the recipe
+    - spams_wrap-windows.cpp.patch     # the patch file is expected to be found in the recipe
 
   #########################################################################
   # Note, the source section is optional. If you want to specify a source #
