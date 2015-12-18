@@ -21,7 +21,7 @@ source:
   # or from git:
   # git_url can also be a relative path to the recipe directory
   git_url: git://github.com/ukoethe/vigra.git
-  git_tag: ca2246798fed70e8a7bd0994f22ee9f857e9aba0 # must include commit e4946fe0387bf9086ef074da6912c763f832c053
+  git_tag: 2adbb538f5471ea675c70ee328398a442a147289 # must include commit e4946fe0387bf9086ef074da6912c763f832c053
 
   ## or from hg:
   #hg_url: ssh://hg@bitbucket.org/ilanschnell/bsdiff4
@@ -56,7 +56,7 @@ source:
 
 build:
   # The build number should be incremented for new builds of the same version
-  number: 4        # (defaults to 0)
+  number: 5        # (defaults to 0)
   #string: abc     # (defaults to default conda build string plus the build
   #                # number)
   #                # The build string cannot contain a dash '-' character
