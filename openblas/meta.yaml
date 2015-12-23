@@ -1,13 +1,13 @@
 package:
   name: openblas
-  version: 0.2.14
+  version: 0.2.15
 
 source:
-  fn: openblas-0.2.14.tgz
-  url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.14
+  fn: openblas-0.2.15.tgz
+  url: http://github.com/xianyi/OpenBLAS/tarball/v0.2.15
 
 build:
-  number: 674
+  number: 100
 
   track_features:
     - openblas
