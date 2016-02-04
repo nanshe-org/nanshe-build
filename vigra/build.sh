@@ -5,7 +5,7 @@ source $CWD/../common-vars.sh
 if [[ `uname` == 'Darwin' ]]; then
     VIGRA_CXX_FLAGS="${CXXFLAGS}"
 else
-    VIGRA_CXX_FLAGS="-pthread ${CXXFLAGS}"
+    VIGRA_CXX_FLAGS="-pthread -std=c++11 ${CXXFLAGS}"
 fi
 
 # In release mode, we use -O2 because gcc is known to miscompile certain vigra functionality at the O3 level.
@@ -31,6 +31,7 @@ cmake ..\
         -DCMAKE_CXX_FLAGS_DEBUG="${VIGRA_CXX_FLAGS}" \
 \
         -DWITH_VIGRANUMPY=TRUE \
+        -DWITH_BOOST_THREAD=1 \
         -DDEPENDENCY_SEARCH_PREFIX=${PREFIX} \
 \
         -DFFTW3F_INCLUDE_DIR=${PREFIX}/include \
