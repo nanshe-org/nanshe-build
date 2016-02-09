@@ -20,9 +20,10 @@ requirements:
     - numpy
 
 build:
-  number: 102
+  number: 104
 
   features:
+    - nomkl
     - openblas
 
 about:
