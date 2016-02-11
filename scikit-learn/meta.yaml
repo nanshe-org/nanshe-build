@@ -22,7 +22,7 @@ requirements:
     - scipy
 
 build:
-  number: 100
+  number: 102
 
   features:
     - nomkl
