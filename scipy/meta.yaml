@@ -1,10 +1,10 @@
 package:
   name: scipy
-  version: 0.16.1
+  version: 0.17.0
 
 source:
-  url: https://pypi.python.org/packages/source/s/scipy/scipy-0.16.1.tar.gz
-  fn: scipy-0.16.1.tar.gz
+  url: https://pypi.python.org/packages/source/s/scipy/scipy-0.17.0.tar.gz
+  fn: scipy-0.17.0.tar.gz
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - numpy
 
 build:
-  number: 104
+  number: 100
 
   features:
     - nomkl
