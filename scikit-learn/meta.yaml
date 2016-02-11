@@ -1,0 +1,33 @@
+package:
+  name: scikit-learn
+  version: 0.17
+
+source:
+  url: https://pypi.python.org/packages/source/s/scikit-learn/scikit-learn-0.17.tar.gz
+  fn: scikit-learn-0.17.tar.gz
+
+requirements:
+  build:
+    - python
+    - cython
+    - openblas
+    - numpy
+    - scipy
+
+  run:
+    - libgcc
+    - python
+    - openblas
+    - numpy
+    - scipy
+
+build:
+  number: 100
+
+  features:
+    - nomkl
+    - openblas
+
+about:
+  home: http://scikit-learn.org/
+  license: BSD
