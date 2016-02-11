@@ -72,11 +72,11 @@ cmake ..\
 
 
 # BUILD (in parallel)
-make -j${CPU_COUNT}
+make -j2
 
 # TEST (before install)
 # (Since conda hasn't performed its link step yet, we must help the tests locate their dependencies via LD_LIBRARY_PATH)
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make -j${CPU_COUNT} check
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make -j2 check
 
 # "install" to the build prefix (conda will relocate these files afterwards)
 make install
