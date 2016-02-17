@@ -1,7 +1,7 @@
-diff --git a/sklearn/utils/extmath.py b/sklearn/utils/extmath.py
+diff --git sklearn/utils/extmath.py sklearn/utils/extmath.py
 index a1a3bf4..33c174a 100644
---- a/sklearn/utils/extmath.py
-+++ b/sklearn/utils/extmath.py
+--- sklearn/utils/extmath.py
++++ sklearn/utils/extmath.py
 @@ -305,7 +305,12 @@ def randomized_svd(M, n_components, n_oversamples=10, n_iter=0,
      U = np.dot(Q, Uhat)
  
@@ -16,10 +16,10 @@ index a1a3bf4..33c174a 100644
  
      if transpose:
          # transpose back the results according to the input convention
-diff --git a/sklearn/utils/tests/test_extmath.py b/sklearn/utils/tests/test_extmath.py
+diff --git sklearn/utils/tests/test_extmath.py sklearn/utils/tests/test_extmath.py
 index 0df11da..bd19cca 100644
---- a/sklearn/utils/tests/test_extmath.py
-+++ b/sklearn/utils/tests/test_extmath.py
+--- sklearn/utils/tests/test_extmath.py
++++ sklearn/utils/tests/test_extmath.py
 @@ -14,6 +14,7 @@ from sklearn.utils.testing import assert_almost_equal
  from sklearn.utils.testing import assert_array_equal
  from sklearn.utils.testing import assert_array_almost_equal
