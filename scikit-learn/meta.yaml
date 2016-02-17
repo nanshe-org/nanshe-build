@@ -5,6 +5,8 @@ package:
 source:
   url: https://pypi.python.org/packages/source/s/scikit-learn/scikit-learn-0.17.tar.gz
   fn: scikit-learn-0.17.tar.gz
+  patches:
+    - svd_sign_flip.patch
 
 requirements:
   build:
