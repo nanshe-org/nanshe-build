@@ -10,6 +10,7 @@ requirements:
   build:
     - python
     - cython
+    - nomkl
     - openblas
     - numpy
     - scipy
@@ -22,7 +23,7 @@ requirements:
     - scipy
 
 build:
-  number: 100
+  number: 102
 
   features:
     - nomkl
