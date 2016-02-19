@@ -12,6 +12,7 @@ requirements:
   build:
     - python
     - cython
+    - nomkl
     - openblas 
 
   run:
@@ -19,7 +20,7 @@ requirements:
     - openblas
 
 build:
-  number: 104
+  number: 106
 
   features:
     - nomkl
