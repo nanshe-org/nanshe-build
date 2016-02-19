@@ -58,7 +58,7 @@ source:
 
 build:
   # The build number should be incremented for new builds of the same version
-  number: 13       # (defaults to 0)
+  number: 15       # (defaults to 0)
   #string: abc     # (defaults to default conda build string plus the build
   #                # number)
   #                # The build string cannot contain a dash '-' character
@@ -144,6 +144,7 @@ requirements:
   build:
     - gcc
     - python
+    - nomkl
     - openblas
     - numpy
     - scipy
