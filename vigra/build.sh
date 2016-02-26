@@ -3,7 +3,7 @@ CWD=$(cd `dirname $0` && pwd)
 source $CWD/../common-vars.sh
 
 if [[ `uname` == 'Darwin' ]]; then
-    VIGRA_CXX_FLAGS="${CXXFLAGS}"
+    VIGRA_CXX_FLAGS="-std=c++11 ${CXXFLAGS}"
 else
     VIGRA_CXX_FLAGS="-pthread -std=c++11 ${CXXFLAGS}"
 fi
