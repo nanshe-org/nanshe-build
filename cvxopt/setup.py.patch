@@ -1,0 +1,20 @@
+diff --git setup.py setup.py
+index 031ad53..1e109db 100644
+--- setup.py
++++ setup.py
+@@ -6,7 +6,7 @@ from glob import glob
+ import os
+ 
+ # Modifiy this if BLAS and LAPACK libraries are not in /usr/lib.
+-BLAS_LIB_DIR = '/usr/lib'
++BLAS_LIB_DIR = os.path.join(os.getenv('PREFIX'), 'lib')
+ 
+ # Default names of BLAS and LAPACK libraries
+ BLAS_LIB = ['blas']
+@@ -256,4 +256,5 @@ language.''',
+         'Programming Language :: Python :: 3',
+         'Topic :: Scientific/Engineering',
+         ],
++    zip_safe=False
+     )
+
