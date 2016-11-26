@@ -3,9 +3,9 @@ CWD=$(cd `dirname $0` && pwd)
 source $CWD/../common-vars.sh
 
 if [[ `uname` == 'Darwin' ]]; then
-    VIGRA_CXX_FLAGS="${CXXFLAGS}"
+    VIGRA_CXX_FLAGS="-std=c++11 ${CXXFLAGS}"
 else
-    VIGRA_CXX_FLAGS="-pthread ${CXXFLAGS}"
+    VIGRA_CXX_FLAGS="-pthread -std=c++11 ${CXXFLAGS}"
 fi
 
 # In release mode, we use -O2 because gcc is known to miscompile certain vigra functionality at the O3 level.
@@ -15,7 +15,7 @@ VIGRA_LDFLAGS="${CXX_LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 
 # We like to make builds of vigra from arbitrary git commits (not always tagged).
 # Include the git commit in the build version so we remember which one was used for the build.
-echo "g$(git rev-parse --short HEAD)" > __conda_version__.txt
+#echo "g$(git rev-parse --short HEAD)" > __conda_version__.txt
 
 # CONFIGURE
 mkdir build
@@ -45,18 +45,9 @@ cmake ..\
 \
         -DBoost_INCLUDE_DIR=${PREFIX}/include \
         -DBoost_LIBRARY_DIRS=${PREFIX}/lib \
-        -DBoost_PYTHON_LIBRARY=${PREFIX}/lib/libboost_python-mt.${DYLIB_EXT} \
-        -DBoost_PYTHON_LIBRARY_RELEASE=${PREFIX}/lib/libboost_python-mt.${DYLIB_EXT} \
-        -DBoost_PYTHON_LIBRARY_DEBUG=${PREFIX}/lib/libboost_python-mt.${DYLIB_EXT} \
 \
         -DPYTHON_EXECUTABLE=${PYTHON} \
         -DPYTHON_INCLUDE_PATH=${PREFIX}/include \
-        -DPYTHON_LIBRARIES=${PREFIX}/lib/libpython.2.7.${DYLIB_EXT} \
-        -DPYTHON_NUMPY_INCLUDE_DIR=${PREFIX}/lib/python2.7/site-packages/numpy/core/include \
-        -DPYTHON_SPHINX=${PREFIX}/bin/sphinx-build \
-\
-        -DVIGRANUMPY_LIBRARIES="${PREFIX}/lib/libpython2.7.${DYLIB_EXT};${PREFIX}/lib/libboost_python.${DYLIB_EXT};${PREFIX}/lib/libboost_thread.${DYLIB_EXT};${PREFIX}/lib/libboost_system.${DYLIB_EXT}" \
-        -DVIGRANUMPY_INSTALL_DIR=${PREFIX}/lib/python2.7/site-packages \
 \
         -DZLIB_INCLUDE_DIR=${PREFIX}/include \
         -DZLIB_LIBRARY=${PREFIX}/lib/libz.${DYLIB_EXT} \
